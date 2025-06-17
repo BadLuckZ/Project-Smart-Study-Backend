@@ -1,0 +1,50 @@
+# My Adaptive Question Generator & Problem Solver - Backend
+
+โปรเจกต์ Backend สำหรับระบบสร้างและฝึกฝนชุดคำถามอัตโนมัติด้วย AI  
+พัฒนาด้วย Go โดยใช้ Go Fiber เป็น Web Framework
+
+## Tech Stack
+
+- Go 1.22+
+- Fiber (github.com/gofiber/fiber/v2)
+- (เตรียมต่อยอด: GORM, PostgreSQL, Firebase Admin SDK, Google Gemini API, unidoc/unipdf)
+
+## Getting Started
+
+1. Clone Repository
+
+   ```bash
+   git clone https://github.com/BadLuckZ/Project-Smart-Study-Backend.git
+   cd Project-Smart-Study-Backend
+   ```
+
+2. ติดตั้ง Dependency
+
+   ```bash
+   go mod download
+   ```
+
+3. Run Server
+   ```bash
+   go run main.go
+   ```
+   เซิร์ฟเวอร์จะเริ่มที่ `localhost:3000` (ค่าเริ่มต้น)
+
+---
+
+## Workday Progress
+
+### Day 1
+
+- สร้าง Go Project ด้วย `go mod init`
+- ติดตั้ง Go Fiber (`github.com/gofiber/fiber/v2`)
+- สร้างไฟล์ `main.go` สำหรับรัน Fiber Server
+- ทดสอบรันเซิร์ฟเวอร์ (`go run main.go`) และเข้าถึง root endpoint ได้
+- สร้างไฟล์ `.gitignore` สำหรับ Go โปรเจกต์
+- Push โค้ดเริ่มต้นขึ้น GitHub
+
+---
+
+## หมายเหตุ
+
+- พัฒนาเพื่อใช้ร่วมกับ Frontend: [Project-Smart-Study-Frontend](https://github.com/BadLuckZ/Project-Smart-Study-Frontend)
