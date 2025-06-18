@@ -35,6 +35,7 @@
 ## Workday Progress
 
 ### Day 1
+
 - สร้าง Go Project ด้วย `go mod init`
 - ติดตั้ง Go Fiber (`github.com/gofiber/fiber/v2`)
 - สร้างไฟล์ `main.go` สำหรับรัน Fiber Server
@@ -43,6 +44,7 @@
 - Push โค้ดเริ่มต้นขึ้น GitHub
 
 ### Day 2
+
 - ติดตั้ง GORM (`gorm.io/gorm`, `gorm.io/driver/postgres`) สำหรับ ORM
 - ติดตั้ง `github.com/joho/godotenv`
 - เขียนโค้ดเชื่อมต่อกับฐานข้อมูล PostgreSQL (อ่านค่าจาก .env)
@@ -51,6 +53,10 @@
 - ใช้ GORM AutoMigrate สำหรับตาราง users
 - สร้างไฟล์ `.env` สำหรับตัวแปรที่ใช้เข้าถึงฐานข้อมูล
 - Push โค้ดทั้งหมดขึ้น GitHub
+
+### Day 3
+
+- ไม่มีส่วนที่แก้ไข Backend
 
 ---
 
