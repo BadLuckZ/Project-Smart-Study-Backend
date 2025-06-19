@@ -26,3 +26,6 @@ Thumbs.db
 # Environment
 .env
 .env.*
+
+# JSON
+firebaseSDK.json
