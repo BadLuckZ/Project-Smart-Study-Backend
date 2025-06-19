@@ -60,6 +60,12 @@
 
 ### Day 4
 
+- ติดตั้ง และตั้งค่า **Firebase Admin SDK for Go** ผ่าน https://firebase.google.com/docs/admin/setup#go
+- สร้างไฟล์แยกสำหรับ initialize Firebase Admin (`firebase_admin.go`)
+- เขียน **Auth Middleware** (อ่าน header `Authorization: Bearer <token>`, verify userToken, inject uid และ email)
+- สร้าง **Protected Endpoint** `/api/user/me` (GET) ที่คืน uid/email เฉพาะผู้ที่ Auth แล้ว (`middleware.go`)
+- เพิ่ม `GOOGLE_APPLICATION_CREDENTIALS` เข้าไปใน `.env` และเพิ่ม `env.md` เพื่อบอกว่าต้อง Set อะไรบ้าง
+
 ---
 
 ## หมายเหตุ
