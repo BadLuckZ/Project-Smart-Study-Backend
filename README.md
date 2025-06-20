@@ -72,6 +72,10 @@
 - ปรับให้ Endpoint `/api/user/me` ที่ตรวจสอบ userToken ผ่าน Firebase Admin SDK คืนข้อมูลผู้ใช้ในรูปแบบ JSON (uid, username, email, photoUrl)
 - เปิดใช้งาน CORS (`app.Use(cors.New())`) เพื่อให้ Frontend สามารถเรียก API ข้าม port ได้
 
+### Day 6
+
+- ไม่มีส่วนที่แก้ไข Backend
+
 ---
 
 ## หมายเหตุ
