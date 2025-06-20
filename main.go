@@ -15,6 +15,7 @@ func main() {
 	app.Use(cors.New())
 
 	// Route that is protected by AuthMiddleware
+	// ส่งผลลัพธ์ของ GetUserData เมื่อมีการเข้า route นี้ได้
 	app.Get("/api/user/me", AuthMiddleware(), GetUserDataHandler)
 
 	app.Listen(":8080")

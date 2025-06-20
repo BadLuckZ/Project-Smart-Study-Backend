@@ -9,13 +9,13 @@ import (
 
 // ส่ง JSON ของ uid, email, username, photoUrl
 func GetUserDataHandler(c *fiber.Ctx) error {
-	// Get uid from c
+	// ดึง uid จาก c
 	uid := c.Locals("uid").(string)
 
-	// Get email from c
+	// ดึง email จาก c
 	email := c.Locals("email").(string)
 	
-	// ดึง displayName และ image จาก Firebase Admin SDK
+	// ดึง displayName และ photoUrl จาก Firebase Admin SDK
 	app := c.Locals("firebaseApp").(*firebase.App)
 	client, err := app.Auth(context.Background())
 	if err != nil {

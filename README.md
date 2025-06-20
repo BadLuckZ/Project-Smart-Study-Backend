@@ -7,7 +7,8 @@
 
 - Go 1.22+
 - Fiber (github.com/gofiber/fiber/v2)
-- (เตรียมต่อยอด: GORM, PostgreSQL, Firebase Admin SDK, Google Gemini API, unidoc/unipdf)
+- PostgreSQL, Firebase Admin SDK
+- เตรียมต่อยอด: Google Gemini API, unidoc/unipdf
 
 ## Getting Started
 
@@ -28,7 +29,7 @@
    ```bash
    go run main.go
    ```
-   เซิร์ฟเวอร์จะเริ่มที่ `localhost:3000` (ค่าเริ่มต้น)
+   เซิร์ฟเวอร์จะเริ่มที่ `localhost:8080` (ค่าเริ่มต้น)
 
 ---
 
@@ -65,6 +66,11 @@
 - เขียน **Auth Middleware** (อ่าน header `Authorization: Bearer <token>`, verify userToken, inject uid และ email)
 - สร้าง **Protected Endpoint** `/api/user/me` (GET) ที่คืน uid/email เฉพาะผู้ที่ Auth แล้ว (`middleware.go`)
 - เพิ่ม `GOOGLE_APPLICATION_CREDENTIALS` เข้าไปใน `.env` และเพิ่ม `env.md` เพื่อบอกว่าต้อง Set อะไรบ้าง
+
+### Day 5
+
+- ปรับให้ Endpoint `/api/user/me` ที่ตรวจสอบ userToken ผ่าน Firebase Admin SDK คืนข้อมูลผู้ใช้ในรูปแบบ JSON (uid, username, email, photoUrl)
+- เปิดใช้งาน CORS (`app.Use(cors.New())`) เพื่อให้ Frontend สามารถเรียก API ข้าม port ได้
 
 ---
 
