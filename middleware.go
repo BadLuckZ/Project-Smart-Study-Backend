@@ -39,9 +39,12 @@ func AuthMiddleware() fiber.Handler {
 			})
 		}
 
-		// 6. ถ้าสำเร็จ เก็บ uid และ email ใน context (c.Locals)
+		// 6. ถ้าสำเร็จ เก็บ uid, user และ email ใน context (c.Locals)
 		c.Locals("uid", token.UID)
 		c.Locals("email", token.Claims["email"])
+
+		// ส่ง firebaseApp ไปให้ handler ได้ใช้ดึง Username ออกมาจาก Firebase SDK
+		c.Locals("firebaseApp", app)
 
 		// 7. ไปต่อที่ handler ตัวถัดไป
 		return c.Next()
